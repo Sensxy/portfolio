@@ -66,7 +66,7 @@ a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; 
 a:hover { color: var(--spot); }
 :focus-visible { outline: 3px solid var(--spot); outline-offset: 3px; }
 p { margin: 0; }
-h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-height: 0.92; letter-spacing: 0.01em; }
+h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-height: 1.1; letter-spacing: 0.01em; }
 
 .skip { position: absolute; left: -999px; top: 8px; background: var(--white); padding: 8px 12px; border: var(--line) solid var(--ink); z-index: 100; }
 .skip:focus { left: 8px; }
@@ -100,9 +100,9 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-heig
 .page + .page { border-top: var(--line) solid var(--ink); }
 .page--title, .page--end { display: block; }
 
-.chapter-head { position: sticky; top: 96px; }
+.chapter-head { position: sticky; top: 96px; container-type: inline-size; }
 .chapter-no { font-weight: 700; font-size: 0.95rem; color: var(--spot); margin-bottom: 10px; }
-.chapter-head h2 { font-size: clamp(2.5rem, 5.5vw, 4.5rem); letter-spacing: 0.01em; margin-bottom: 18px; }
+.chapter-head h2 { font-size: min(14cqi, 3.5rem); letter-spacing: 0.01em; margin-bottom: 18px; }
 .chapter-sub { max-width: 32ch; color: #2a2d33; }
 
 /* ── Panel primitives ───────────────────────────────────── */
@@ -236,7 +236,7 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
 /* ── Projects ───────────────────────────────────────────── */
 .spread--projects { grid-template-columns: 1.2fr 1fr; }
 .project {
-  font: inherit; color: inherit; text-align: left; cursor: pointer;
+  font: inherit; color: inherit; text-align: left; cursor: pointer; container-type: inline-size;
   display: flex; flex-direction: column; gap: 12px;
   min-height: 240px;
   transition: transform 160ms ease, box-shadow 160ms ease;
@@ -244,8 +244,8 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
 .project--a, .project--b { min-height: 380px; }
 .project:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink); }
 .project:active { transform: none; box-shadow: none; }
-.p-title { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1; letter-spacing: 0.01em; }
-.project--a .p-title { font-size: clamp(2.6rem, 6vw, 4.8rem); }
+.p-title { font-family: var(--display); font-size: min(12cqi, 2.4rem); line-height: 1; letter-spacing: 0.01em; }
+.project--a .p-title { font-size: min(19cqi, 4.8rem); }
 .p-line { font-weight: 700; max-width: 30ch; background: var(--white); align-self: flex-start; }
 .p-stack { font-size: 0.85rem; color: #3b3f47; background: var(--white); align-self: flex-start; }
 .p-open {
