@@ -315,3 +315,5 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
   .project { transition: none; }
   .project:hover { transform: none; }
 }
+/* Keep the mobile chapter menu inside the screen */
+.masthead nav { min-width: 0; }
