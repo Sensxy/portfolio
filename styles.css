@@ -1,3 +1,39 @@
+/* Self-hosted CC Wild Words: use the supplied cuts for all lettering. */
+@font-face {
+  font-family: "CC Wild Words";
+  src: url("CC Wild Words Roman.ttf") format("truetype");
+  font-weight: 100 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CC Wild Words";
+  src: url("CC Wild Words Italic.ttf") format("truetype");
+  font-weight: 100 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CC Wild Words";
+  src: url("CC Wild Words Bold Italic.ttf") format("truetype");
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CC Wild Words";
+  src: url("CC Wild Words Bold Italic.ttf") format("truetype");
+  font-weight: 700 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CC Wild Words Display";
+  src: url("CC Wild Words Bold Italic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 /* ─────────────────────────────────────────────────────────
    Ozan Hessick — portfolio
    A manga chapter in two-color print: ink, newsprint, one spot.
@@ -11,8 +47,8 @@
   --spot: #2B3BFF;       /* the one spot color */
   --gutter: clamp(8px, 1.2vw, 14px);
   --line: 3px;
-  --display: "Bangers", "Impact", "Arial Narrow Bold", sans-serif;   /* manga SFX / title lettering */
-  --body: "Comic Neue", "Comic Sans MS", system-ui, sans-serif;     /* hand-lettered dialogue */
+  --display: "CC Wild Words Display", "CC Wild Words", sans-serif;   /* manga SFX / title lettering */
+  --body: "CC Wild Words", system-ui, sans-serif;     /* hand-lettered dialogue */
   --screentone: radial-gradient(circle, var(--tone) 1.1px, transparent 1.5px) 0 0 / 7px 7px;
   --screentone-fine: radial-gradient(circle, var(--tone) 0.8px, transparent 1.2px) 0 0 / 5px 5px;
 }
@@ -164,10 +200,10 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-heig
 #speedlines, #speedlines-end { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .name {
   position: relative;
-  font-size: min(30cqi, 15rem);
+  font-size: min(15cqi, 9rem);
   letter-spacing: 0.02em;
   display: flex; flex-direction: column;
-  line-height: 0.88;
+  line-height: 1.1;
   pointer-events: none;
   paint-order: stroke fill;
   -webkit-text-stroke: 0.09em var(--white);   /* knock the lines out behind the letters */
