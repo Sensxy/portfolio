@@ -230,7 +230,7 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
   display: flex; flex-direction: column; justify-content: space-between; gap: 22px;
 }
 .yk .bubble { align-self: flex-end; }
-.yk .big-num { position: absolute; right: 18px; top: 10px; color: var(--spot); }
+.yk .big-num { font-size: clamp(2rem, 4vw, 3rem); position: absolute; right: 18px; top: 10px; color: var(--spot); }
 .yk.panel--ink .narration { background: var(--ink); color: var(--white); border-color: var(--white); }
 
 /* ── Projects ───────────────────────────────────────────── */
