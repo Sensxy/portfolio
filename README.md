@@ -3,16 +3,13 @@
 A static, dependency-free portfolio styled as a manga chapter. Plain HTML/CSS/JS, so no build step is needed.
 
 ## Deploy to GitHub Pages
-1. Create a repo named `Sensxy.github.io` (or any name).
-2. Push these files to the `main` branch root.
-3. Settings → Pages → Source: "Deploy from a branch" → `main` / `(root)`.
-4. The site goes live at `https://sensxy.github.io` (or `https://sensxy.github.io/<repo>`).
+Live at https://sensxy.github.io/portfolio/ from the `main` branch of `Sensxy/portfolio` (Settings → Pages → Deploy from a branch → `main` / root). Commit changes to `main` and the site updates within a minute or two.
 
 ## Deploy to Vercel
 Import the repo in Vercel and choose the "Other" framework preset. You don't need a build command, and the output directory is `.`.
 
 ## Editing
-- **The game (Chapter 3):** search `index.html` for `TODO(Ozan)`. Drop a screenshot or GIF in `assets/` and swap the placeholder.
+- **The game (Chapter 3):** the screenshot is `assets/inchoate.png`.
 - **Projects:** each card in Chapter 2 opens a `<dialog id="dlg-…">` near the bottom of `index.html`.
 - **Résumé:** replace `assets/Ozan_Hessick_Resume.pdf`.
 - **Colors and fonts:** these are the CSS variables at the top of `styles.css`.

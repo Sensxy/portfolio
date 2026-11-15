@@ -11,8 +11,8 @@
   --spot: #2B3BFF;       /* the one spot color */
   --gutter: clamp(8px, 1.2vw, 14px);
   --line: 3px;
-  --display: "Dela Gothic One", "Noto Sans CJK JP Black", "Arial Black", sans-serif;
-  --body: "Zen Kaku Gothic New", "Noto Sans CJK JP", "Hiragino Sans", system-ui, sans-serif;
+  --display: "Bangers", "Impact", "Arial Narrow Bold", sans-serif;   /* manga SFX / title lettering */
+  --body: "Comic Neue", "Comic Sans MS", system-ui, sans-serif;     /* hand-lettered dialogue */
   --screentone: radial-gradient(circle, var(--tone) 1.1px, transparent 1.5px) 0 0 / 7px 7px;
   --screentone-fine: radial-gradient(circle, var(--tone) 0.8px, transparent 1.2px) 0 0 / 5px 5px;
 }
@@ -30,7 +30,7 @@ a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; 
 a:hover { color: var(--spot); }
 :focus-visible { outline: 3px solid var(--spot); outline-offset: 3px; }
 p { margin: 0; }
-h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-height: 0.95; }
+h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-height: 0.92; letter-spacing: 0.01em; }
 
 .skip { position: absolute; left: -999px; top: 8px; background: var(--white); padding: 8px 12px; border: var(--line) solid var(--ink); z-index: 100; }
 .skip:focus { left: 8px; }
@@ -43,7 +43,8 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-heig
   background: var(--paper);
   border-bottom: var(--line) solid var(--ink);
 }
-.mark { font-family: var(--display); font-size: 1.5rem; text-decoration: none; letter-spacing: -0.02em; }
+.masthead nav { min-width: 0; }
+.mark { font-family: var(--display); font-size: 1.5rem; text-decoration: none; letter-spacing: 0.01em; }
 .chapters { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; font-weight: 700; font-size: 0.95rem; }
 .chapters a { text-decoration: none; }
 .chapters a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--spot); }
@@ -65,7 +66,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-heig
 
 .chapter-head { position: sticky; top: 96px; }
 .chapter-no { font-weight: 700; font-size: 0.95rem; color: var(--spot); margin-bottom: 10px; }
-.chapter-head h2 { font-size: clamp(2.5rem, 5.5vw, 4.5rem); letter-spacing: -0.02em; margin-bottom: 18px; }
+.chapter-head h2 { font-size: clamp(2.5rem, 5.5vw, 4.5rem); letter-spacing: 0.01em; margin-bottom: 18px; }
 .chapter-sub { max-width: 32ch; color: #2a2d33; }
 
 /* ── Panel primitives ───────────────────────────────────── */
@@ -102,8 +103,11 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-heig
   border-radius: 50%;
   padding: 1.5em 2.6em;
   font-weight: 700;
-  line-height: 1.4;
-  max-width: 34ch;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  max-width: 32ch;
 }
 .bubble::before, .bubble::after {   /* tail: ink triangle under a paper triangle */
   content: "";
@@ -116,7 +120,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-heig
 .bubble::after  { bottom: -13px; margin-left: 3px; border-width: 14px 2px 0 9px; border-top-color: var(--white); }
 .bubble--light { background: var(--white); }
 
-.big-num { font-family: var(--display); font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.02em; }
+.big-num { font-family: var(--display); font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1; letter-spacing: 0.01em; }
 .page > .stack { grid-column: 2; margin-top: 0; }
 .stack { font-size: 0.9rem; color: #3b3f47; margin-top: 18px; }
 .sfx {
@@ -139,19 +143,20 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-heig
   padding: clamp(20px, 4vw, 48px);
   min-height: 460px;
   cursor: crosshair;
+  container-type: inline-size;
 }
 #speedlines, #speedlines-end { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .name {
   position: relative;
-  font-size: clamp(3.6rem, 11vw, 9.5rem);
-  letter-spacing: -0.035em;
+  font-size: min(30cqi, 15rem);
+  letter-spacing: 0.02em;
   display: flex; flex-direction: column;
   line-height: 0.88;
   pointer-events: none;
   paint-order: stroke fill;
   -webkit-text-stroke: 0.09em var(--white);   /* knock the lines out behind the letters */
 }
-.name span:last-child { padding-left: 0.35em; }
+.name span:last-child { padding-left: 0.3em; }
 .bubble--hero { position: relative; align-self: flex-start; font-size: clamp(1rem, 1.6vw, 1.2rem); }
 .panel--caption { display: flex; flex-direction: column; gap: 14px; justify-content: center; background: var(--white) var(--screentone-fine); }
 .role { font-family: var(--display); font-size: clamp(1.15rem, 1.8vw, 1.45rem); line-height: 1.15; background: var(--white); align-self: flex-start; padding: 2px 6px; }
@@ -177,20 +182,17 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
 .yk.panel--ink .narration { background: var(--ink); color: var(--white); border-color: var(--white); }
 
 /* ── Projects ───────────────────────────────────────────── */
-.spread--projects {
-  grid-template-columns: 1.3fr 1fr;
-  grid-template-rows: auto auto;
-}
+.spread--projects { grid-template-columns: 1.2fr 1fr; }
 .project {
   font: inherit; color: inherit; text-align: left; cursor: pointer;
   display: flex; flex-direction: column; gap: 12px;
   min-height: 240px;
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
-.project--a { grid-row: 1 / span 2; min-height: 420px; }
+.project--a, .project--b { min-height: 380px; }
 .project:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink); }
 .project:active { transform: none; box-shadow: none; }
-.p-title { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1; letter-spacing: -0.01em; }
+.p-title { font-family: var(--display); font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1; letter-spacing: 0.01em; }
 .project--a .p-title { font-size: clamp(2.6rem, 6vw, 4.8rem); }
 .p-line { font-weight: 700; max-width: 30ch; background: var(--white); align-self: flex-start; }
 .p-stack { font-size: 0.85rem; color: #3b3f47; background: var(--white); align-self: flex-start; }
@@ -243,7 +245,7 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
   display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 32px;
   padding: clamp(24px, 6vw, 80px);
 }
-.tbc { position: relative; paint-order: stroke fill; -webkit-text-stroke: 0.08em var(--white); font-size: clamp(3rem, 9vw, 7.5rem); letter-spacing: -0.03em; max-width: 9ch; }
+.tbc { position: relative; paint-order: stroke fill; -webkit-text-stroke: 0.08em var(--white); font-size: clamp(3rem, 9vw, 7.5rem); letter-spacing: 0.01em; max-width: 9ch; }
 .bubble--end { position: relative; font-size: 1.1rem; }
 .contact {
   position: relative; list-style: none; margin: 0; padding: 0;
@@ -271,7 +273,7 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
   to   { transform: none; opacity: 1; }
 }
 .sv { position: relative; padding: clamp(20px, 4vw, 44px); display: grid; gap: 26px; }
-.sv-title { font-size: clamp(2.6rem, 7vw, 5rem); letter-spacing: -0.02em; padding-right: 48px; }
+.sv-title { font-size: clamp(2.6rem, 7vw, 5rem); letter-spacing: 0.01em; padding-right: 48px; }
 .sv > .bubble { justify-self: start; font-size: 1.1rem; }
 .sv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
 .sv-grid .panel { display: flex; flex-direction: column; gap: 12px; }
@@ -299,7 +301,7 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
   .panel--hero { grid-row: auto; min-height: 52svh; }
   .pager { display: none; }
   .spread--projects { grid-template-columns: 1fr; }
-  .project--a { grid-row: auto; min-height: 300px; }
+  .project--a, .project--b { min-height: 280px; }
   .spread--beyond { grid-template-columns: 1fr 1fr; }
   .panel--stat:nth-child(n) { grid-column: span 2; }
   .sv-grid, .game-beats { grid-template-columns: 1fr; }
@@ -315,5 +317,3 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
   .project { transition: none; }
   .project:hover { transform: none; }
 }
-/* Keep the mobile chapter menu inside the screen */
-.masthead nav { min-width: 0; }

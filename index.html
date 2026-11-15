@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#EEF0F2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -50,7 +50,7 @@
         <div class="panel panel--tone panel--links">
           <a href="assets/Ozan_Hessick_Resume.pdf">Résumé (PDF)</a>
           <a href="mailto:ohessick@protonmail.com">Email me</a>
-          <a href="https://linkedin.com/in/ozan-hessick">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/ozan-hessick-16043031a/">LinkedIn</a>
           <a href="https://github.com/Sensxy">GitHub</a>
         </div>
       </div>
@@ -77,8 +77,8 @@
           <p class="bubble">Reusable Azure DevOps templates cut the ones the platform team maintains by a quarter.</p>
         </li>
         <li class="panel yk panel--tone">
-          <p class="narration">A FastAPI dashboard for sprint metrics wouldn't stay up in Kubernetes.</p>
-          <p class="bubble">I fixed the deployment, secrets and API auth so my manager could actually use it.</p>
+          <p class="narration">Sprint metrics were scattered across tools, with no single view for the scrum master.</p>
+          <p class="bubble">So I built a scrum-master dashboard in Python and FastAPI and deployed it on Kubernetes myself, including secrets and API auth.</p>
         </li>
         <li class="panel yk panel--ink">
           <p class="narration">Shared Helm templates were all logging into Vault with the same AppRole credentials.</p>
@@ -109,12 +109,6 @@
           <span class="p-stack">React · Vite · Express · SQLite</span>
           <span class="p-open">Open</span>
         </button>
-        <button class="panel project project--c" data-open="flightradar">
-          <span class="p-title">FlightRadar</span>
-          <span class="p-line">A travel booking app with JWT auth and a clean REST API.</span>
-          <span class="p-stack">Flask · SQLAlchemy · PostgreSQL · React</span>
-          <span class="p-open">Open</span>
-        </button>
       </div>
     </section>
 
@@ -132,7 +126,7 @@
         </figure>
 
         <div class="panel panel--caption game-premise">
-          <p class="narration">You wake up chained in a dim room. Solve its puzzle in the right order, or wake up in the bed again and start over.</p>
+          <p class="narration">A different kind of horror: a puzzle game where dying is the point. Every time you fail, you wake up again knowing a little more, and each life gets you closer to the truth.</p>
         </div>
 
         <div class="game-beats">
@@ -145,13 +139,13 @@
             <p>I built the playable horror demo room from Blender models: hanging hooks, a surgical table, industrial lights. Vertex snapping, affine texture warping, dithering and color banding make it read like 2002.</p>
           </div>
           <div class="panel panel--ink">
-            <p class="narration">The play</p>
-            <p>First-person movement with a flashlight, footsteps and interaction prompts. A combination puzzle reveals an iron crank, and the crank drives the gear mechanism that opens the exit.</p>
+            <p class="narration">What's coming</p>
+            <p>Death mechanics that change what you know and what the rooms show you, multiple rooms to escape, and slow-burn psychological horror that gets under your skin rather than jumping out at you.</p>
           </div>
         </div>
 
         <div class="panel panel--aside">
-          <p class="bubble">I also wrote the first draft of the story and co-designed the death-and-wake-up loop.</p>
+          <p class="bubble">I also wrote the game's entire narrative.</p>
         </div>
       </div>
       <p class="stack">Unity 6 · URP · C# · Blender · GitLab merge-request workflow</p>
@@ -177,14 +171,13 @@
         <div class="panel panel--stat panel--tone">
           <p class="big-num">40M+</p>
           <p>combined views on my own channels.</p>
-          <p class="socials"><a href="https://www.tiktok.com/@sensxy">TikTok</a> <a href="https://www.instagram.com/strawhat_ozan">Instagram</a></p>
         </div>
         <div class="panel panel--stat">
           <p class="big-num">$40K+</p>
           <p>raised in humanitarian aid in two months, organizing cultural and fundraising events with the Utah-Turkish American Association.</p>
         </div>
         <div class="panel panel--aside">
-          <p class="bubble">Off the clock: Disco Elysium, Pathologic 2, manga, the gym. Also, I don't like cheese.</p>
+          <p class="bubble">Off the clock: the gym, video games (mostly League of Legends), and anime and manga. Also, I don't like cheese.</p>
         </div>
       </div>
     </section>
@@ -197,7 +190,7 @@
         <p class="bubble bubble--end">Looking for new-grad software roles starting in 2027. Platform, DevSecOps or full-stack.</p>
         <ul class="contact">
           <li><a href="mailto:ohessick@protonmail.com">ohessick@protonmail.com</a></li>
-          <li><a href="https://linkedin.com/in/ozan-hessick">LinkedIn</a></li>
+          <li><a href="https://www.linkedin.com/in/ozan-hessick-16043031a/">LinkedIn</a></li>
           <li><a href="https://github.com/Sensxy">GitHub</a></li>
           <li><a href="assets/Ozan_Hessick_Resume.pdf">Résumé (PDF)</a></li>
         </ul>
@@ -233,21 +226,6 @@
         <div class="panel"><p class="narration">In between</p><p>Workflow routing that sends each request to the right person instead of a shared inbox.</p></div>
       </div>
       <p class="stack">React · Vite · Express · SQLite · University of Utah · March 2026</p>
-    </article>
-  </dialog>
-
-  <dialog class="spreadview" id="dlg-flightradar" aria-labelledby="fr-h">
-    <article class="sv">
-      <button class="sv-close" data-close aria-label="Close">×</button>
-      <h3 id="fr-h" class="sv-title">FlightRadar</h3>
-      <p class="bubble">A full-stack booking app: browse travel packages, sign in, book, and see your trips.</p>
-      <div class="sv-grid">
-        <div class="panel"><p class="narration">Auth</p><p>Registration and login with bcrypt-hashed passwords; login returns a JWT that guards every booking route.</p></div>
-        <div class="panel panel--tone"><p class="narration">API</p><p>A Flask REST API on PostgreSQL through SQLAlchemy, with versioned schema migrations and seed data.</p></div>
-        <div class="panel"><p class="narration">Front end</p><p>A React single-page app built with Vite and React Router, with package search by query.</p></div>
-      </div>
-      <p class="stack">Flask · SQLAlchemy · Flask-JWT-Extended · PostgreSQL · React · Vite</p>
-      <p class="sv-links"><a href="https://github.com/Sensxy/FlightRadar">View the code on GitHub</a></p>
     </article>
   </dialog>
 
