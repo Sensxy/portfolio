@@ -129,6 +129,22 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 400; line-heig
   transform: rotate(-8deg);
 }
 
+/* Panel art: original ink drawings behind or below the lettering */
+.art {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: left bottom;
+  pointer-events: none; user-select: none;
+}
+.art--block {
+  position: static; height: 170px; margin-top: auto;
+  object-fit: contain; object-position: center bottom;
+}
+.has-art > :not(.art) { position: relative; z-index: 1; }
+.has-art > .sfx, .yk.has-art > .big-num { position: absolute; }
+.panel--stat > .art:not(.art--block) { left: auto; width: 62%; object-fit: contain; object-position: right center; }
+.panel--stat.panel--ink.has-art > p { background: var(--ink); align-self: flex-start; box-shadow: 0 0 0 6px var(--ink); }
+.project > .art { top: auto; height: 58%; object-fit: contain; object-position: center bottom; }
+
 /* ── Title page ─────────────────────────────────────────── */
 .page--title { padding-top: clamp(20px, 3vw, 36px); }
 .spread { display: grid; gap: var(--gutter); }
@@ -174,7 +190,7 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
   max-width: 640px;
 }
 .yk {
-  min-height: 200px;
+  min-height: 250px;
   display: flex; flex-direction: column; justify-content: space-between; gap: 22px;
 }
 .yk .bubble { align-self: flex-end; }
@@ -203,13 +219,6 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
   padding: 4px 12px;
 }
 .project:hover .p-open { background: var(--spot); }
-.project--a::before {    /* a big ghosted search glyph */
-  content: ""; position: absolute; right: -40px; bottom: -40px;
-  width: 260px; height: 260px; border-radius: 50%;
-  border: 26px solid transparent;
-  background: var(--screentone) padding-box, var(--ink) border-box;
-  opacity: 0.12;
-}
 
 /* ── Game ───────────────────────────────────────────────── */
 .spread--game { grid-template-columns: 1fr; }
@@ -308,7 +317,7 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
 }
 @media (max-width: 520px) {
   .panel--stat:nth-child(2), .panel--stat:nth-child(3) { grid-column: span 2; }
-  .yk .big-num { position: static; }
+  .yk .big-num, .yk.has-art > .big-num { position: static; }
 }
 
 @media (prefers-reduced-motion: reduce) {

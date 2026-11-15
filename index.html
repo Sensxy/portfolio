@@ -66,21 +66,25 @@
       </header>
 
       <ol class="yonkoma">
-        <li class="panel yk">
+        <li class="panel has-art yk">
+          <img class="art" src="assets/art/zions-manual.svg" alt="" aria-hidden="true">
           <p class="sfx" aria-hidden="true">click click click</p>
           <p class="narration">Every new repo meant someone setting up an Azure DevOps pipeline by hand.</p>
           <p class="bubble">So I built a TypeScript Backstage action that creates the pipeline straight from the GitHub repo.</p>
         </li>
-        <li class="panel yk">
+        <li class="panel has-art yk">
+          <img class="art" src="assets/art/zions-templates.svg" alt="" aria-hidden="true">
           <p class="big-num">−25%</p>
           <p class="narration">Too many near-identical pipeline definitions to maintain.</p>
           <p class="bubble">Reusable Azure DevOps templates cut the ones the platform team maintains by a quarter.</p>
         </li>
-        <li class="panel yk panel--tone">
+        <li class="panel has-art yk panel--tone">
+          <img class="art" src="assets/art/zions-dashboard.svg" alt="" aria-hidden="true">
           <p class="narration">Sprint metrics were scattered across tools, with no single view for the scrum master.</p>
           <p class="bubble">So I built a scrum-master dashboard in Python and FastAPI and deployed it on Kubernetes myself, including secrets and API auth.</p>
         </li>
-        <li class="panel yk panel--ink">
+        <li class="panel has-art yk panel--ink">
+          <img class="art" src="assets/art/zions-vault.svg" alt="" aria-hidden="true">
           <p class="narration">Shared Helm templates were all logging into Vault with the same AppRole credentials.</p>
           <p class="bubble bubble--light">Now each namespace authenticates with its own Kubernetes service account.</p>
         </li>
@@ -97,13 +101,15 @@
       </header>
 
       <div class="spread spread--projects">
-        <button class="panel project project--a" data-open="anidb">
+        <button class="panel has-art project project--a" data-open="anidb">
+          <img class="art" src="assets/art/anidb.svg" alt="" aria-hidden="true">
           <span class="p-title">AniDB</span>
           <span class="p-line">Search anime by what a character said.</span>
           <span class="p-stack">Python · Flask · React · PostgreSQL · Docker</span>
           <span class="p-open">Open</span>
         </button>
-        <button class="panel project project--b panel--tone" data-open="health">
+        <button class="panel has-art project project--b panel--tone" data-open="health">
+          <img class="art" src="assets/art/health.svg" alt="" aria-hidden="true">
           <span class="p-title">Community Health Intake</span>
           <span class="p-line">An AI triage inbox for Intermountain Healthcare's community team.</span>
           <span class="p-stack">React · Vite · Express · SQLite</span>
@@ -130,17 +136,20 @@
         </div>
 
         <div class="game-beats">
-          <div class="panel">
+          <div class="panel has-art">
             <p class="narration">The look</p>
             <p>I prototyped the game's PS2-era visual style and built a runtime harness that switches between it and the baseline during Play mode. It cuts the render scale in half, uses point-filtered textures, low-res hard shadows and dark fog, and restores every setting on exit.</p>
+            <img class="art art--block" src="assets/art/inchoate-look.svg" alt="" aria-hidden="true">
           </div>
-          <div class="panel panel--tone">
+          <div class="panel has-art panel--tone">
             <p class="narration">The room</p>
             <p>I built the playable horror demo room from Blender models: hanging hooks, a surgical table, industrial lights. Vertex snapping, affine texture warping, dithering and color banding make it read like 2002.</p>
+            <img class="art art--block" src="assets/art/inchoate-room.svg" alt="" aria-hidden="true">
           </div>
-          <div class="panel panel--ink">
+          <div class="panel has-art panel--ink">
             <p class="narration">What's coming</p>
             <p>Death mechanics that change what you know and what the rooms show you, multiple rooms to escape, and slow-burn psychological horror that gets under your skin rather than jumping out at you.</p>
+            <img class="art art--block" src="assets/art/inchoate-coming.svg" alt="" aria-hidden="true">
           </div>
         </div>
 
@@ -160,7 +169,8 @@
       </header>
 
       <div class="spread spread--beyond">
-        <div class="panel panel--stat panel--ink">
+        <div class="panel panel--stat panel--ink has-art">
+          <img class="art" src="assets/art/beyond-views.svg" alt="" aria-hidden="true">
           <p class="big-num">10M+</p>
           <p>views on Playkit's largest campaign, with content for clients including Cash App and Airlearn.</p>
         </div>
@@ -168,13 +178,15 @@
           <p class="big-num">Top 1%</p>
           <p>of 200+ Playkit creators for organic brand content.</p>
         </div>
-        <div class="panel panel--stat panel--tone">
+        <div class="panel panel--stat panel--tone has-art">
           <p class="big-num">40M+</p>
           <p>combined views on my own channels.</p>
+          <img class="art art--block" src="assets/art/beyond-eye.svg" alt="" aria-hidden="true">
         </div>
-        <div class="panel panel--stat">
+        <div class="panel panel--stat has-art">
           <p class="big-num">$40K+</p>
           <p>raised in humanitarian aid in two months, organizing cultural and fundraising events with the Utah-Turkish American Association.</p>
+          <img class="art art--block" src="assets/art/beyond-aid.svg" alt="" aria-hidden="true">
         </div>
         <div class="panel panel--aside">
           <p class="bubble">Off the clock: the gym, video games (mostly League of Legends), and anime and manga. Also, I don't like cheese.</p>
