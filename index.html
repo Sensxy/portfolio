@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ozan Hessick — Software Engineer</title>
+  <meta name="description" content="Ozan Hessick: computer science student at the University of Utah building platform automation, full-stack apps, and a team video game.">
+  <meta property="og:title" content="Ozan Hessick — Software Engineer">
+  <meta property="og:description" content="Platform automation, full-stack projects, and a game in progress. Told in panels.">
+  <meta name="theme-color" content="#EEF0F2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#ch-work">Skip to content</a>
+
+  <header class="masthead">
+    <a class="mark" href="#top" aria-label="Back to top">OH</a>
+    <nav aria-label="Chapters">
+      <ol class="chapters">
+        <li><a href="#ch-work">Work</a></li>
+        <li><a href="#ch-projects">Projects</a></li>
+        <li><a href="#ch-game">The game</a></li>
+        <li><a href="#ch-beyond">Beyond code</a></li>
+        <li><a href="#ch-contact">Contact</a></li>
+        <li><a href="assets/Ozan_Hessick_Resume.pdf">Résumé</a></li>
+      </ol>
+    </nav>
+    <p class="pager" aria-live="polite"><span id="page-now">1</span>/<span id="page-total">6</span></p>
+  </header>
+
+  <main id="top">
+
+    <!-- ───────── Page 1: title page ───────── -->
+    <section class="page page--title" data-page>
+      <div class="spread spread--hero">
+        <div class="panel panel--hero">
+          <canvas id="speedlines" aria-hidden="true"></canvas>
+          <h1 class="name"><span>Ozan</span><span>Hessick</span></h1>
+          <p class="bubble bubble--hero">I build the automation that lets other engineers stop doing things by hand.</p>
+        </div>
+        <div class="panel panel--caption">
+          <p class="role">Software engineer · open to new-grad roles for 2027</p>
+          <p class="narration">Computer science at the University of Utah, graduating May 2027.</p>
+          <p class="narration">Most recently a software engineering intern on the platform team at Zions Bancorporation.</p>
+          <p class="narration skills"><strong>Works in:</strong> Python, TypeScript, C#, C++, SQL · React, FastAPI, Flask · Kubernetes, Helm, Vault, Azure DevOps, Docker · Unity</p>
+        </div>
+        <div class="panel panel--tone panel--links">
+          <a href="assets/Ozan_Hessick_Resume.pdf">Résumé (PDF)</a>
+          <a href="mailto:ohessick@protonmail.com">Email me</a>
+          <a href="https://linkedin.com/in/ozan-hessick">LinkedIn</a>
+          <a href="https://github.com/Sensxy">GitHub</a>
+        </div>
+      </div>
+      <p class="hint" aria-hidden="true">Scroll, or press <kbd>→</kbd> to turn the page</p>
+    </section>
+
+    <!-- ───────── Page 2: work, as a yonkoma ───────── -->
+    <section class="page" id="ch-work" data-page aria-labelledby="work-h">
+      <header class="chapter-head">
+        <p class="chapter-no">Chapter 1</p>
+        <h2 id="work-h">The platform team</h2>
+        <p class="chapter-sub">Software engineering intern, Zions Bancorporation · Salt Lake City · May–Aug 2026</p>
+      </header>
+
+      <ol class="yonkoma">
+        <li class="panel yk">
+          <p class="sfx" aria-hidden="true">click click click</p>
+          <p class="narration">Every new repo meant someone setting up an Azure DevOps pipeline by hand.</p>
+          <p class="bubble">So I built a TypeScript Backstage action that creates the pipeline straight from the GitHub repo.</p>
+        </li>
+        <li class="panel yk">
+          <p class="big-num">−25%</p>
+          <p class="narration">Too many near-identical pipeline definitions to maintain.</p>
+          <p class="bubble">Reusable Azure DevOps templates cut the ones the platform team maintains by a quarter.</p>
+        </li>
+        <li class="panel yk panel--tone">
+          <p class="narration">A FastAPI dashboard for sprint metrics wouldn't stay up in Kubernetes.</p>
+          <p class="bubble">I fixed the deployment, secrets and API auth so my manager could actually use it.</p>
+        </li>
+        <li class="panel yk panel--ink">
+          <p class="narration">Shared Helm templates were all logging into Vault with the same AppRole credentials.</p>
+          <p class="bubble bubble--light">Now each namespace authenticates with its own Kubernetes service account.</p>
+        </li>
+      </ol>
+      <p class="stack">TypeScript · Backstage · Azure DevOps · Kubernetes · Helm · HashiCorp Vault · Python · FastAPI</p>
+    </section>
+
+    <!-- ───────── Page 3: projects ───────── -->
+    <section class="page" id="ch-projects" data-page aria-labelledby="proj-h">
+      <header class="chapter-head">
+        <p class="chapter-no">Chapter 2</p>
+        <h2 id="proj-h">Side quests</h2>
+        <p class="chapter-sub">Open a panel to see the full spread.</p>
+      </header>
+
+      <div class="spread spread--projects">
+        <button class="panel project project--a" data-open="anidb">
+          <span class="p-title">AniDB</span>
+          <span class="p-line">Search anime by what a character said.</span>
+          <span class="p-stack">Python · Flask · React · PostgreSQL · Docker</span>
+          <span class="p-open">Open</span>
+        </button>
+        <button class="panel project project--b panel--tone" data-open="health">
+          <span class="p-title">Community Health Intake</span>
+          <span class="p-line">An AI triage inbox for Intermountain Healthcare's community team.</span>
+          <span class="p-stack">React · Vite · Express · SQLite</span>
+          <span class="p-open">Open</span>
+        </button>
+        <button class="panel project project--c" data-open="flightradar">
+          <span class="p-title">FlightRadar</span>
+          <span class="p-line">A travel booking app with JWT auth and a clean REST API.</span>
+          <span class="p-stack">Flask · SQLAlchemy · PostgreSQL · React</span>
+          <span class="p-open">Open</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ───────── Page 4: the game ───────── -->
+    <section class="page" id="ch-game" data-page aria-labelledby="game-h">
+      <header class="chapter-head">
+        <p class="chapter-no">Chapter 3</p>
+        <h2 id="game-h">Inchoate</h2>
+        <p class="chapter-sub">A first-person puzzle horror game in Unity, built by a four-person team for the University of Utah senior capstone. Demo this semester, full game in 2027.</p>
+      </header>
+
+      <div class="spread spread--game">
+        <figure class="panel panel--screen">
+          <img src="assets/inchoate.png" width="739" height="474" alt="Inchoate's horror room: hooks hanging from the rafters, a three-dial combination pedestal, and a wooden surgical table on a checkered floor, rendered in a low-resolution, dithered PS2 style.">
+        </figure>
+
+        <div class="panel panel--caption game-premise">
+          <p class="narration">You wake up chained in a dim room. Solve its puzzle in the right order, or wake up in the bed again and start over.</p>
+        </div>
+
+        <div class="game-beats">
+          <div class="panel">
+            <p class="narration">The look</p>
+            <p>I prototyped the game's PS2-era visual style and built a runtime harness that switches between it and the baseline during Play mode. It cuts the render scale in half, uses point-filtered textures, low-res hard shadows and dark fog, and restores every setting on exit.</p>
+          </div>
+          <div class="panel panel--tone">
+            <p class="narration">The room</p>
+            <p>I built the playable horror demo room from Blender models: hanging hooks, a surgical table, industrial lights. Vertex snapping, affine texture warping, dithering and color banding make it read like 2002.</p>
+          </div>
+          <div class="panel panel--ink">
+            <p class="narration">The play</p>
+            <p>First-person movement with a flashlight, footsteps and interaction prompts. A combination puzzle reveals an iron crank, and the crank drives the gear mechanism that opens the exit.</p>
+          </div>
+        </div>
+
+        <div class="panel panel--aside">
+          <p class="bubble">I also wrote the first draft of the story and co-designed the death-and-wake-up loop.</p>
+        </div>
+      </div>
+      <p class="stack">Unity 6 · URP · C# · Blender · GitLab merge-request workflow</p>
+    </section>
+
+    <!-- ───────── Page 5: beyond code ───────── -->
+    <section class="page" id="ch-beyond" data-page aria-labelledby="beyond-h">
+      <header class="chapter-head">
+        <p class="chapter-no">Chapter 4</p>
+        <h2 id="beyond-h">Beyond code</h2>
+        <p class="chapter-sub">I also make things for an audience that scrolls past in half a second.</p>
+      </header>
+
+      <div class="spread spread--beyond">
+        <div class="panel panel--stat panel--ink">
+          <p class="big-num">10M+</p>
+          <p>views on Playkit's largest campaign, with content for clients including Cash App and Airlearn.</p>
+        </div>
+        <div class="panel panel--stat">
+          <p class="big-num">Top 1%</p>
+          <p>of 200+ Playkit creators for organic brand content.</p>
+        </div>
+        <div class="panel panel--stat panel--tone">
+          <p class="big-num">40M+</p>
+          <p>combined views on my own channels.</p>
+          <p class="socials"><a href="https://www.tiktok.com/@sensxy">TikTok</a> <a href="https://www.instagram.com/strawhat_ozan">Instagram</a></p>
+        </div>
+        <div class="panel panel--stat">
+          <p class="big-num">$40K+</p>
+          <p>raised in humanitarian aid in two months, organizing cultural and fundraising events with the Utah-Turkish American Association.</p>
+        </div>
+        <div class="panel panel--aside">
+          <p class="bubble">Off the clock: Disco Elysium, Pathologic 2, manga, the gym. Also, I don't like cheese.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── Page 6: contact ───────── -->
+    <section class="page page--end" id="ch-contact" data-page aria-labelledby="contact-h">
+      <div class="panel panel--end">
+        <canvas id="speedlines-end" aria-hidden="true"></canvas>
+        <h2 id="contact-h" class="tbc">To be continued</h2>
+        <p class="bubble bubble--end">Looking for new-grad software roles starting in 2027. Platform, DevSecOps or full-stack.</p>
+        <ul class="contact">
+          <li><a href="mailto:ohessick@protonmail.com">ohessick@protonmail.com</a></li>
+          <li><a href="https://linkedin.com/in/ozan-hessick">LinkedIn</a></li>
+          <li><a href="https://github.com/Sensxy">GitHub</a></li>
+          <li><a href="assets/Ozan_Hessick_Resume.pdf">Résumé (PDF)</a></li>
+        </ul>
+      </div>
+      <p class="colophon">Drawn in HTML, CSS and a little canvas. No frameworks were harmed.</p>
+    </section>
+  </main>
+
+  <!-- ───────── Project spreads (opened from Chapter 2) ───────── -->
+  <dialog class="spreadview" id="dlg-anidb" aria-labelledby="anidb-h">
+    <article class="sv">
+      <button class="sv-close" data-close aria-label="Close">×</button>
+      <h3 id="anidb-h" class="sv-title">AniDB</h3>
+      <p class="bubble">You remember the line, not the episode. AniDB finds the scene from what was said.</p>
+      <div class="sv-grid">
+        <div class="panel"><p class="narration">The pipeline</p><p>A Python ETL job cleans raw subtitle files and loads every line of dialogue into PostgreSQL, tagged by show, episode and timestamp.</p></div>
+        <div class="panel panel--tone"><p class="narration">The search</p><p>Full-text search backed by a GIN index, so dialogue queries stay fast as the corpus grows.</p></div>
+        <div class="panel"><p class="narration">The app</p><p>A Flask REST API feeding an interactive React front end, all running in Docker.</p></div>
+      </div>
+      <p class="stack">Python · Flask · React · PostgreSQL · Docker · Sept 2025</p>
+      <p class="sv-links"><a href="https://github.com/Sensxy/AniDB">View the code on GitHub</a></p>
+    </article>
+  </dialog>
+
+  <dialog class="spreadview" id="dlg-health" aria-labelledby="health-h">
+    <article class="sv">
+      <button class="sv-close" data-close aria-label="Close">×</button>
+      <h3 id="health-h" class="sv-title">Community Health Intake</h3>
+      <p class="bubble">Intermountain Healthcare's Community Health team was triaging requests out of an email inbox by hand.</p>
+      <div class="sv-grid">
+        <div class="panel"><p class="narration">For the public</p><p>A dynamic request form that adapts to what someone is asking for, so requests arrive structured.</p></div>
+        <div class="panel panel--tone"><p class="narration">For the team</p><p>An admin dashboard with AI-written summaries and priority tags on every request.</p></div>
+        <div class="panel"><p class="narration">In between</p><p>Workflow routing that sends each request to the right person instead of a shared inbox.</p></div>
+      </div>
+      <p class="stack">React · Vite · Express · SQLite · University of Utah · March 2026</p>
+    </article>
+  </dialog>
+
+  <dialog class="spreadview" id="dlg-flightradar" aria-labelledby="fr-h">
+    <article class="sv">
+      <button class="sv-close" data-close aria-label="Close">×</button>
+      <h3 id="fr-h" class="sv-title">FlightRadar</h3>
+      <p class="bubble">A full-stack booking app: browse travel packages, sign in, book, and see your trips.</p>
+      <div class="sv-grid">
+        <div class="panel"><p class="narration">Auth</p><p>Registration and login with bcrypt-hashed passwords; login returns a JWT that guards every booking route.</p></div>
+        <div class="panel panel--tone"><p class="narration">API</p><p>A Flask REST API on PostgreSQL through SQLAlchemy, with versioned schema migrations and seed data.</p></div>
+        <div class="panel"><p class="narration">Front end</p><p>A React single-page app built with Vite and React Router, with package search by query.</p></div>
+      </div>
+      <p class="stack">Flask · SQLAlchemy · Flask-JWT-Extended · PostgreSQL · React · Vite</p>
+      <p class="sv-links"><a href="https://github.com/Sensxy/FlightRadar">View the code on GitHub</a></p>
+    </article>
+  </dialog>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
