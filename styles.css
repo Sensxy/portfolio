@@ -285,18 +285,20 @@ kbd { font-family: var(--body); font-weight: 700; border: 2px solid var(--ink); 
 .panel--aside { grid-column: 1 / -1; border: 0; background: transparent; padding: 8px 0 20px; }
 
 /* ── Ending ─────────────────────────────────────────────── */
-.panel--end {
+.panel--end { container-type: inline-size;
   min-height: 70svh;
   display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 32px;
   padding: clamp(24px, 6vw, 80px);
 }
-.tbc { position: relative; paint-order: stroke fill; -webkit-text-stroke: 0.08em var(--white); font-size: clamp(3rem, 9vw, 7.5rem); letter-spacing: 0.01em; max-width: 9ch; }
+.tbc { position: relative; paint-order: stroke fill; -webkit-text-stroke: 0.08em var(--white); font-size: min(14cqi, 7.5rem); letter-spacing: 0.01em; max-width: 9ch; }
 .bubble--end { position: relative; font-size: 1.1rem; }
 .contact {
   position: relative; list-style: none; margin: 0; padding: 0;
-  display: flex; flex-wrap: wrap; gap: 10px;
+  display: flex; flex-wrap: wrap; gap: 10px; max-width: 100%;
 }
+.contact li { max-width: 100%; }
 .contact a {
+  max-width: 100%; overflow-wrap: anywhere;
   display: inline-block; text-decoration: none;
   font-weight: 700; background: var(--ink); color: var(--white);
   padding: 8px 16px;
